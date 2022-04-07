@@ -13,8 +13,8 @@ def handler(event, context):
                 {
                     'OutputName': 'rais',
                     'S3Output': {
-                        'S3Uri': 's3://igti-ney-rais-prod-landing-zone-127012818163/rais',
-                        'LocalPath': '/opt/ml/processing/output/rais',
+                        'S3Uri': 's3://cp-datalake/dms/',
+                        'LocalPath': '/opt/ml/processing/output/datalake',
                         'S3UploadMode': 'EndOfJob'
                     }
                 },
@@ -29,7 +29,7 @@ def handler(event, context):
             }
         },
         AppSpecification={
-            'ImageUri': '127012818163.dkr.ecr.sa-east-1.amazonaws.com/igti-ney-prod-extract-rais:latest'
+            'ImageUri': '127012818163.dkr.ecr.sa-east-1.amazonaws.com/datalake:latest'
         },
         RoleArn=sagemaker_role
     )

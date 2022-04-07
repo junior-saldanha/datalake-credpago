@@ -3,24 +3,13 @@ import py7zr
 import os
 
 basepath = "./opt/ml/processing/output"
-dlpath = f"{basepath}/rais"
+dlpath = f"{basepath}/credpago"
 
 names = [
-     #"RAIS_VINC_PUB_CENTRO_OESTE.7z",
-     "RAIS_VINC_PUB_NORDESTE.7z",
-     "RAIS_VINC_PUB_NORTE.7z",
-     "RAIS_VINC_PUB_SUL.7z",
-     "RAIS_VINC_PUB_MG_ES_RJ.7z",
-     "RAIS_VINC_PUB_SP.7z",
+    
 ]
 urls = [
-    #"ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/2020/RAIS_VINC_PUB_CENTRO_OESTE.7z",
-    "ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/2020/RAIS_VINC_PUB_NORDESTE.7z",
-    "ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/2020/RAIS_VINC_PUB_NORTE.7z",
-    "ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/2020/RAIS_VINC_PUB_SUL.7z",
-    "ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/2020/RAIS_VINC_PUB_MG_ES_RJ.7z",
-    "ftp://ftp.mtps.gov.br/pdet/microdados/RAIS/2020/RAIS_VINC_PUB_SP.7z",
-]
+    
 
 def obter_dados(url, name):
     filename = dlpath + '/' + name

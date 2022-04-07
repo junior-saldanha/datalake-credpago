@@ -1,9 +1,9 @@
 variable "region_id" {
-  default = "us-east-2"
+  default = "us-east-1"
 }
 
 variable "prefix" {
-  default = "igti-ney-rais"
+  default = "credpago-datalake"
 }
 
 variable "account" {
@@ -14,15 +14,15 @@ variable "account" {
 locals {
   prefix = "${var.prefix}-${terraform.workspace}"
   common_tags = {
-    Project      = "RAIS"
+    Project      = "DATALAKE"
     ManagedBy    = "Terraform"
-    Department   = "IGTI",
-    Provider     = "A3DATA",
+    Department   = "analytics",
+    Provider     = "credpago",
     Owner        = "Data Engineering"
     BusinessUnit = "Data"
     Billing      = "Infrastructure"
     Environment  = terraform.workspace
-    UserEmail    = "neylson.crepalde@a3data.com.br"
+    UserEmail    = "itauba.junior@credpago.com"
   }
 }
 
